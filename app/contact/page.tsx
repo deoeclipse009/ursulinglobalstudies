@@ -47,7 +47,7 @@ export default function ContactPage() {
             </li>
             <li>
               <a
-                href="mailto:hello@ugs.edu"
+                href="mailto:ursulinglobalstudies4326@gmail.com"
                 className="group flex items-center gap-4 rounded-xl border border-ink/10 bg-paper p-4 transition-all hover:border-brand/30 hover:shadow-md focus-brand"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-ink text-paper">
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-ink">Email</p>
-                  <p className="text-xs text-ink/60">hello@ugs.edu</p>
+                  <p className="text-xs text-ink/60">ursulinglobalstudies4326@gmail.com</p>
                 </div>
               </a>
             </li>
@@ -69,10 +69,10 @@ export default function ContactPage() {
             <p className="text-sm leading-relaxed text-text">
               Have a story we should cover? Send tips to{" "}
               <a
-                href="mailto:tips@ugs.edu"
+                href="mailto:ursulinglobalstudies4326@gmail.com"
                 className="font-semibold text-brand underline decoration-brand/30 underline-offset-2 hover:decoration-brand"
               >
-                tips@ugs.edu
+                ursulinglobalstudies4326@gmail.com
               </a>
               .
             </p>

@@ -49,9 +49,9 @@ export function SiteHeader() {
           <Image
             src="/ugs_menu_bar.png"
             alt=""
-            width={100}
-            height={100}
-            className="h-30 w-30 object-contain transition-transform group-hover:rotate-[-4deg]"
+            width={130}
+            height={130}
+            className="h-22 w-22 object-contain transition-transform group-hover:rotate-[-4deg]"
             priority
           />
         </Link>

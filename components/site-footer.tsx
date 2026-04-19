@@ -82,11 +82,11 @@ export function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@ugs.edu"
+                  href="mailto:ursulinglobalstudies4326@gmail.com"
                   className="group inline-flex items-center gap-2 text-sm text-paper/80 transition-colors hover:text-paper"
                 >
                   <Mail className="h-4 w-4" />
-                  hello@ugs.edu
+                  ursulinglobalstudies4326@gmail.com
                 </a>
               </li>
             </ul>
