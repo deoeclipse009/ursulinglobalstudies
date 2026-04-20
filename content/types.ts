@@ -30,6 +30,12 @@ export type ContentBlock =
   | { type: "divider" }
   | { type: "sources"; items: string[] };
 
+export interface ArticleTranslation {
+  title?: string;
+  excerpt?: string;
+  content?: ContentBlock[];
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -41,6 +47,9 @@ export interface Article {
   category: Category;
   readingMinutes: number;
   content: ContentBlock[];
+  translations?: {
+    id?: ArticleTranslation;
+  };
 }
 
 export interface Update {
@@ -50,4 +59,16 @@ export interface Update {
   date: string; // ISO date
   kind: "announcement" | "milestone" | "event";
   icon?: string; // emoji
+  translations?: {
+    id?: { title?: string; body?: string };
+  };
+}
+
+export interface UpcomingEvent {
+  date: string;
+  title: string;
+  body: string;
+  translations?: {
+    id?: { title?: string; body?: string };
+  };
 }

@@ -1,18 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Globe, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryChip } from "@/components/category-chip";
-import { getSortedArticles } from "@/content/articles";
+import { getSortedArticles, getLocalizedArticle } from "@/content/articles";
 import { formatDate } from "@/lib/utils";
+import { useLanguage } from "@/components/language-provider";
 
 export default function HomePage() {
+  const { t, lang } = useLanguage();
   const all = getSortedArticles();
   const [featured, ...rest] = all;
   const latest = rest.slice(0, 6);
+  const featuredLocalized = featured ? getLocalizedArticle(featured, lang) : null;
 
-  const issueDate = new Date().toLocaleDateString("en-US", {
+  const issueDate = new Date().toLocaleDateString(lang === "id" ? "id-ID" : "en-US", {
     weekday: "long",
     year: "numeric",
     month: "long",
@@ -26,15 +31,15 @@ export default function HomePage() {
         <div className="container pt-10 sm:pt-14">
           {/* Folio bar — tiny caps row at the top of every broadsheet */}
           <div className="folio">
-            <span>Volume 1</span>
+            <span>{t("home.folio.issue")}</span>
             <span className="hidden sm:inline">{issueDate}</span>
-            <span>Surakarta Edition</span>
+            <span>{t("home.folio.edition")}</span>
           </div>
 
           {/* Masthead */}
           <div className="py-10 text-center sm:py-14">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ink/60">
-              The student newsroom of SMA Regina Pacis Surakarta
+              {t("home.masthead.tagline")}
             </p>
 
             <h1 className="font-serif text-5xl font-black leading-[0.95] tracking-tight text-ink sm:text-7xl lg:text-[7.5rem]">
@@ -53,27 +58,23 @@ export default function HomePage() {
           <div className="grid gap-8 py-10 sm:grid-cols-3 sm:gap-10 sm:py-14">
             <div className="sm:col-span-2">
               <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-brand">
-                From the editors
+                {t("home.lede.eyebrow")}
               </p>
               <h2 className="font-serif text-3xl font-bold leading-[1.1] text-ink sm:text-4xl lg:text-5xl">
-                News that speaks{" "}
-                <em className="font-normal italic text-brand">your language.</em>
+                {t("home.lede.headline.before")}{" "}
+                <em className="font-normal italic text-brand">{t("home.lede.headline.accent")}</em>
               </h2>
               <p className="drop-cap mt-5 max-w-xl text-base leading-relaxed text-text sm:text-lg">
-                UGS is a student community of SMA Regina Pacis Surakarta that reads the world so you don't
-                have to do it alone. We research, fact-check, and publish stories
-                that matter to our generation, from the policies shaping our
-                feeds to the climate we'll inherit. Built by students, for
-                students.
+                {t("home.lede.body")}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg" variant="brand">
                   <Link href="/news">
-                    Read the latest <ArrowRight className="h-4 w-4" />
+                    {t("home.cta.read")} <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <Link href="/about">About UGS</Link>
+                  <Link href="/about">{t("home.cta.about")}</Link>
                 </Button>
               </div>
             </div>
@@ -81,34 +82,28 @@ export default function HomePage() {
             {/* Vertical-rule separated sidebar with the three pillars */}
             <aside className="sm:border-l sm:border-ink/20 sm:pl-8">
               <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-ink/60">
-                Inside this issue
+                {t("home.sidebar.title")}
               </p>
               <ul className="space-y-5">
                 <li className="flex gap-3">
                   <Globe className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" />
                   <div>
-                    <p className="text-sm font-semibold text-ink">Global coverage</p>
-                    <p className="text-xs text-text">
-                      Six categories, global reach.
-                    </p>
+                    <p className="text-sm font-semibold text-ink">{t("home.sidebar.global.title")}</p>
+                    <p className="text-xs text-text">{t("home.sidebar.global.body")}</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <Users className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" />
                   <div>
-                    <p className="text-sm font-semibold text-ink">Youth perspectives</p>
-                    <p className="text-xs text-text">
-                      Reported and edited by students.
-                    </p>
+                    <p className="text-sm font-semibold text-ink">{t("home.sidebar.youth.title")}</p>
+                    <p className="text-xs text-text">{t("home.sidebar.youth.body")}</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <Sparkles className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" />
                   <div>
-                    <p className="text-sm font-semibold text-ink">Always fresh</p>
-                    <p className="text-xs text-text">
-                      Published continuously, not on deadline.
-                    </p>
+                    <p className="text-sm font-semibold text-ink">{t("home.sidebar.fresh.title")}</p>
+                    <p className="text-xs text-text">{t("home.sidebar.fresh.body")}</p>
                   </div>
                 </li>
               </ul>
@@ -126,17 +121,17 @@ export default function HomePage() {
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-brand">
-                Featured
+                {t("home.featured.eyebrow")}
               </p>
               <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">
-                The story we're reading now
+                {t("home.featured.title")}
               </h2>
             </div>
             <Link
               href="/news"
               className="hidden text-sm font-medium text-ink/60 transition-colors hover:text-brand sm:inline-flex sm:items-center sm:gap-1 focus-brand rounded"
             >
-              All stories <ArrowRight className="h-4 w-4" />
+              {t("home.allStories")} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -159,10 +154,10 @@ export default function HomePage() {
                 <CategoryChip category={featured.category} size="md" />
               </div>
               <h3 className="font-serif text-2xl font-bold leading-tight text-ink transition-colors group-hover:text-brand sm:text-3xl lg:text-4xl">
-                {featured.title}
+                {featuredLocalized!.title}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-text sm:text-lg">
-                {featured.excerpt}
+                {featuredLocalized!.excerpt}
               </p>
               <div className="mt-6 flex items-center gap-3 text-sm text-ink/60">
                 <span className="font-medium text-ink">{featured.author}</span>
@@ -171,10 +166,10 @@ export default function HomePage() {
                   {formatDate(featured.publishedAt)}
                 </time>
                 <span aria-hidden>·</span>
-                <span>{featured.readingMinutes} min read</span>
+                <span>{featured.readingMinutes} {t("article.readTime")}</span>
               </div>
               <div className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-brand">
-                Read the full story{" "}
+                {t("home.featured.cta")}{" "}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -187,17 +182,17 @@ export default function HomePage() {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-brand">
-              Latest
+              {t("home.latest.eyebrow")}
             </p>
             <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">
-              More from the newsroom
+              {t("home.latest.title")}
             </h2>
           </div>
           <Link
             href="/news"
             className="text-sm font-medium text-ink/60 transition-colors hover:text-brand inline-flex items-center gap-1 focus-brand rounded"
           >
-            All stories <ArrowRight className="h-4 w-4" />
+            {t("home.allStories")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -212,19 +207,18 @@ export default function HomePage() {
       <section className="container pb-24">
         <div className="rounded-2xl bg-ink px-6 py-14 text-center text-paper sm:px-12 sm:py-20">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-data">
-            Our mission
+            {t("home.mission.eyebrow")}
           </p>
           <p className="mx-auto max-w-3xl font-serif text-2xl font-bold leading-snug sm:text-3xl lg:text-4xl">
-            Don't just scroll. Question what shows up — and notice what doesn't.
+            {t("home.mission.headline")}
           </p>
           <p className="mx-auto mt-5 max-w-xl text-sm text-paper/70 sm:text-base">
-            UGS is built by students, for students. Six categories. 100%
-            fact-checked. No ads, no algorithms.
+            {t("home.mission.body")}
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="brand">
               <Link href="/about">
-                How we work <ArrowRight className="h-4 w-4" />
+                {t("home.mission.cta")} <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>

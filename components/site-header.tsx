@@ -6,14 +6,8 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-
-const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/news", label: "News" },
-  { href: "/about", label: "About" },
-  { href: "/updates", label: "Updates" },
-  { href: "/contact", label: "Contact" },
-];
+import { LanguageToggle } from "@/components/language-toggle";
+import { useLanguage } from "@/components/language-provider";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -30,6 +24,16 @@ export function SiteHeader() {
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  const { t } = useLanguage();
+
+  const NAV = [
+    { href: "/", label: t("nav.home") },
+    { href: "/news", label: t("nav.news") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/updates", label: t("nav.updates") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
 
   return (
     <header
@@ -78,6 +82,9 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <div className="ml-2 border-l border-ink/15 pl-2">
+            <LanguageToggle />
+          </div>
         </nav>
 
         <button
@@ -119,6 +126,9 @@ export function SiteHeader() {
                 </Link>
               );
             })}
+            <div className="mt-1 border-t border-ink/10 pt-2 px-1">
+              <LanguageToggle />
+            </div>
           </div>
         </nav>
       )}

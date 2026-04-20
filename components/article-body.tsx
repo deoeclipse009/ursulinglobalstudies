@@ -1,11 +1,15 @@
-import type { ContentBlock } from "@/content/types";
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
+import type { ContentBlock } from "@/content/types";
 
 interface ArticleBodyProps {
   blocks: ContentBlock[];
 }
 
 export function ArticleBody({ blocks }: ArticleBodyProps) {
+  const { t } = useLanguage();
   return (
     <div className="prose-article">
       {blocks.map((block, i) => {
@@ -73,7 +77,7 @@ export function ArticleBody({ blocks }: ArticleBodyProps) {
                 className="my-7 rounded-xl border border-ink/10 bg-feed/40 p-5 sm:p-6"
               >
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-brand">
-                  Why this actually matters
+                  {t("article.whyItMatters")}
                 </p>
                 <ul className="space-y-3">
                   {block.items.map((item, j) => (
@@ -122,7 +126,7 @@ export function ArticleBody({ blocks }: ArticleBodyProps) {
             return (
               <div key={i} className="mt-12 border-t border-ink/10 pt-8">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.12em] text-ink/60">
-                  Sources
+                  {t("article.sources")}
                 </p>
                 <ol className="list-decimal space-y-2 pl-5 text-sm text-text/80">
                   {block.items.map((src, j) => (

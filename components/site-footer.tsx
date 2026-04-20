@@ -1,17 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import { Instagram, Mail } from "lucide-react";
 import Image from "next/image";
-
-const FOOTER_NAV = [
-  { href: "/", label: "Home" },
-  { href: "/news", label: "News" },
-  { href: "/about", label: "About" },
-  { href: "/updates", label: "Updates" },
-  { href: "/contact", label: "Contact" },
-];
+import { useLanguage } from "@/components/language-provider";
 
 export function SiteFooter() {
+  const { t } = useLanguage();
   const year = new Date().getFullYear();
+
+  const FOOTER_NAV = [
+    { href: "/", label: t("nav.home") },
+    { href: "/news", label: t("nav.news") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/updates", label: t("nav.updates") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
+
   return (
     <footer className="mt-24 bg-ink text-paper">
       {/* Top rule — classic masthead treatment, inverted */}
@@ -37,18 +42,16 @@ export function SiteFooter() {
               />
             </div>
             <p className="mt-4 text-sm leading-relaxed text-paper/70">
-              A student community at SMA Regina Pacis Surakarta fostering global
-              awareness through critical thinking, responsible research, and
-              humanist publishing.
+              {t("footer.description")}
             </p>
             <p className="mt-6 font-serif text-xs italic text-paper/50">
-              "Humanis dan Berwawasan Global"
+              {t("footer.tagline")}
             </p>
           </div>
 
           <div>
             <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-paper/50">
-              Explore
+              {t("footer.explore")}
             </h3>
             <ul className="space-y-2.5">
               {FOOTER_NAV.map((item) => (
@@ -66,7 +69,7 @@ export function SiteFooter() {
 
           <div>
             <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-paper/50">
-              Connect
+              {t("footer.connect")}
             </h3>
             <ul className="space-y-2.5">
               <li>
@@ -94,8 +97,8 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center">
-          <p>© {year} Ursulin Global Studies. Student-run. Fact-checked.</p>
-          <p>SMA Regina Pacis Surakarta · Surakarta, Indonesia</p>
+          <p>{t("footer.rights", { year })}</p>
+          <p>{t("footer.location")}</p>
         </div>
       </div>
     </footer>

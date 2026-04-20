@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Check } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export function ContactForm() {
+  const { t } = useLanguage();
   const [state, setState] = useState<"idle" | "sent">("idle");
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -19,11 +21,9 @@ export function ContactForm() {
       email: String(data.get("email") || ""),
       message: String(data.get("message") || ""),
     };
-    // Log to console so dev can verify — brief says no backend needed.
     // eslint-disable-next-line no-console
     console.log("[UGS contact form]", payload);
 
-    // Also open a mailto draft so it actually goes somewhere.
     const subject = encodeURIComponent(`UGS contact from ${payload.name}`);
     const body = encodeURIComponent(
       `${payload.message}\n\n— ${payload.name} (${payload.email})`,
@@ -38,11 +38,11 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
-        <Input id="name" name="name" required placeholder="Your name" />
+        <Label htmlFor="name">{t("contact.form.name")}</Label>
+        <Input id="name" name="name" required placeholder={t("contact.form.name.placeholder")} />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">{t("contact.form.email")}</Label>
         <Input
           id="email"
           name="email"
@@ -52,12 +52,12 @@ export function ContactForm() {
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">{t("contact.form.message")}</Label>
         <Textarea
           id="message"
           name="message"
           required
-          placeholder="Tell us what's on your mind..."
+          placeholder={t("contact.form.message.placeholder")}
           className="min-h-[140px]"
         />
       </div>
@@ -69,10 +69,10 @@ export function ContactForm() {
       >
         {state === "sent" ? (
           <>
-            <Check className="h-4 w-4" /> Sent — check your mail client
+            <Check className="h-4 w-4" /> {t("contact.form.sent")}
           </>
         ) : (
-          "Submit"
+          t("contact.form.submit")
         )}
       </Button>
     </form>

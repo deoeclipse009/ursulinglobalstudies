@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Clock } from "lucide-react";
 import type { Article } from "@/content/types";
+import { getLocalizedArticle } from "@/content/articles";
 import { CategoryChip } from "@/components/category-chip";
 import { formatDate } from "@/lib/utils";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/components/language-provider";
 
 interface ArticleCardProps {
   article: Article;
@@ -13,12 +17,15 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article, priority, className }: ArticleCardProps) {
+  const { lang } = useLanguage();
+  const { title, excerpt } = getLocalizedArticle(article, lang);
+
   return (
     <article className={cn("group flex flex-col", className)}>
       <Link
         href={`/news/${article.slug}`}
         className="block overflow-hidden rounded-xl focus-brand"
-        aria-label={article.title}
+        aria-label={title}
       >
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-feed">
           <Image
@@ -38,11 +45,11 @@ export function ArticleCard({ article, priority, className }: ArticleCardProps) 
         </div>
         <h3 className="text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-brand sm:text-xl">
           <Link href={`/news/${article.slug}`} className="focus-brand rounded">
-            {article.title}
+            {title}
           </Link>
         </h3>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-text">
-          {article.excerpt}
+          {excerpt}
         </p>
         <div className="mt-4 flex items-center gap-3 text-xs text-ink/50">
           <span className="font-medium text-ink/70">{article.author}</span>

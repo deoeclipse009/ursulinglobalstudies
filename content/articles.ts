@@ -115,6 +115,93 @@ export const articles: Article[] = [
         ],
       },
     ],
+    translations: {
+      id: {
+        title: "Terkunci: Gelombang Global Larangan Media Sosial bagi Remaja",
+        excerpt:
+          "Kamu membuka TikTok. Instagram. Mungkin Snapchat. Lalu — tidak ada apa-apa. Bukan karena aplikasinya mati, tapi karena pemerintah memutuskan kamu terlalu muda untuk ada di sana.",
+        content: [
+          {
+            type: "paragraph",
+            html: "Kamu membuka TikTok. Instagram. Mungkin Snapchat. Lalu — tidak ada apa-apa. <strong>Bukan karena aplikasinya mati. Tapi karena pemerintah memutuskan kamu terlalu muda untuk ada di sana.</strong>",
+          },
+          {
+            type: "paragraph",
+            html: "Itulah kenyataan yang dihadapi jutaan remaja saat ini. Dimulai dari Australia pada 2025 — negara pertama yang sepenuhnya melarang media sosial bagi siapa pun di bawah 16 tahun. Dalam satu bulan, <strong>sekitar 4,7 juta akun remaja dihapus</strong>. Itu baru langkah pertama.",
+          },
+          { type: "eyebrow", text: "Apa yang terjadi" },
+          {
+            type: "paragraph",
+            html: "<strong>Ini bukan lagi eksperimen satu negara — ini adalah gelombang regulasi global.</strong> Spanyol mendorong larangan untuk anak di bawah 16 tahun dengan verifikasi usia wajib. Prancis menargetkan anak di bawah 15 tahun. Indonesia ikut pada Maret 2026 dengan pembatasan pada TikTok, Instagram, dan Facebook. Denmark, Jerman, Malaysia, Inggris — semuanya sedang merencanakan atau aktif memperdebatkan hal yang sama.",
+          },
+          {
+            type: "statsGrid",
+            items: [
+              { flag: "🇦🇺", label: "Australia", value: "Di bawah 16 tahun dilarang — aktif sejak 2025" },
+              { flag: "🇮🇩", label: "Indonesia", value: "Pembatasan di bawah 16 tahun — Maret 2026" },
+              { flag: "🇪🇸", label: "Spanyol", value: "Di bawah 16 tahun + verifikasi usia" },
+              { flag: "🇫🇷", label: "Prancis", value: "Larangan di bawah 15 tahun — perkiraan 2026" },
+              { flag: "🇩🇰", label: "Denmark", value: "Larangan di bawah 15 tahun direncanakan" },
+              { flag: "🇩🇪", label: "Jerman", value: "Membahas usia 14–16 tahun" },
+              { flag: "🇬🇧", label: "Inggris Raya", value: "Konsultasi aktif" },
+              { flag: "🇲🇾", label: "Malaysia", value: "Larangan di bawah 16 tahun direncanakan" },
+            ],
+          },
+          { type: "eyebrow", text: "Mengapa ini terjadi" },
+          {
+            type: "paragraph",
+            html: "Pemerintah menunjuk kesehatan mental — studi yang menghubungkan penggunaan berlebihan dengan <strong>kecemasan, kecanduan, dan rentang perhatian yang semakin pendek</strong>. Tapi ini lebih dalam. Platform ini tidak dibangun untuk menjadi sehat. <strong>Algoritma yang dirancang untuk memaksimalkan keterlibatan</strong> tidak peduli apakah kamu merasa lebih buruk setelah scrolling. Mereka peduli agar kamu kembali. Tambah kekhawatiran privasi data dan paparan konten berbahaya, dan pemerintah mulai memperlakukan akses media sosial seperti rokok: dibatasi usia.",
+          },
+          {
+            type: "callout",
+            html: "Ini bukan sekadar soal kesehatan mental. Ini soal siapa yang mengontrol apa yang dilihat anak muda — dan siapa yang berhak memutuskan itu.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Akses informasi", text: "siapa yang bisa melihat apa, di mana, dan kapan" },
+              { label: "Siklus tren", text: "bagaimana budaya menyebar jika pengguna muda dikunci keluar" },
+              { label: "Penyaringan konten", text: "aturan berbeda = realitas berbeda per negara" },
+              { label: "Identitas digital", text: "verifikasi usia menjadi norma baru" },
+            ],
+          },
+          {
+            type: "paragraph",
+            html: "Internet dulu terasa tanpa batas. Sama untuk semua orang. Yang terjadi sekarang adalah sebaliknya — akses menjadi <strong>bersyarat, tersaring, dibentuk oleh tempat tinggalmu</strong>.",
+          },
+          {
+            type: "heading",
+            level: 2,
+            text: "Dua orang. Aplikasi yang sama. Momen yang sama. Feed yang benar-benar berbeda — karena pemerintah mereka membuat keputusan yang berbeda.",
+          },
+          { type: "eyebrow", text: "Apa yang bisa kamu lakukan" },
+          {
+            type: "paragraph",
+            html: "<strong>Jangan mengandalkan hanya satu platform untuk berita.</strong> Jika TikTok adalah satu-satunya sumbermu dan aksesnya dipotong, kamu terjebak. Cross-check — hanya butuh sepuluh detik. Perhatikan juga kebiasaanmu: apakah kamu membuka aplikasi karena ingin, atau hanya karena refleks? Dan ingat — <strong>datamu dilacak</strong> ada larangan atau tidak.",
+          },
+          { type: "eyebrow", text: "Gambaran yang lebih besar" },
+          {
+            type: "paragraph",
+            html: "Ini bukan soal aplikasi. Ini tentang pergeseran lambat menuju <strong>ruang digital yang terkontrol</strong> — di mana apa yang kamu lihat dibentuk oleh algoritma dan pemerintah secara bersamaan. Bagian yang paling menakutkan bukan apa yang ada di feedmu. <strong>Melainkan apa yang tidak ada — dan bahwa kamu tidak akan pernah tahu.</strong>",
+          },
+          {
+            type: "quote",
+            html: "Jangan hanya scroll. Tanyakan apa yang muncul — dan perhatikan apa yang tidak.",
+          },
+          { type: "divider" },
+          {
+            type: "sources",
+            items: [
+              "Australian eSafety Commissioner. (2025). <em>Online Safety Amendment (Social Media Minimum Age) Act 2024: Implementation report.</em> eSafety.gov.au.",
+              "Reuters. (2026, January). <em>Europe moves toward teen social media bans as Spain, France finalize age restrictions.</em> Reuters.com.",
+              "Kementerian Komunikasi dan Digital Republik Indonesia. (2026). <em>Kebijakan pembatasan akses media sosial bagi pengguna di bawah 16 tahun.</em> Kominfo.go.id.",
+              "BBC News. (2026, February). <em>Social media age limits: Which countries are introducing bans and why?</em>",
+              "We Are Social & Meltwater. (2026). <em>Digital 2026: Indonesia country report.</em> Datareportal.com.",
+            ],
+          },
+        ],
+      },
+    },
   },
   {
     slug: "youth-climate-summit-2026",
@@ -152,6 +239,37 @@ export const articles: Article[] = [
         html: "The adults keep saying the next generation will fix this. We're the next generation. We're not waiting for permission anymore.",
       },
     ],
+    translations: {
+      id: {
+        title: "Youth Climate Summit 2026: Generasi Kita Bertindak",
+        excerpt:
+          "Liputan dari KTT iklim pemuda global di mana para pelajar mengusulkan solusi yang selama puluhan tahun dihindari pemerintah.",
+        content: [
+          {
+            type: "paragraph",
+            html: "Lebih dari 3.000 pelajar dari 48 negara berkumpul di Jakarta minggu lalu untuk Youth Climate Summit 2026 — konferensi lingkungan yang dipimpin pelajar terbesar yang pernah diadakan di Asia Tenggara. Pesannya jelas: <strong>kami tidak lagi menunggu izin untuk peduli terhadap masa depan kami.</strong>",
+          },
+          { type: "eyebrow", text: "Apa yang dibahas" },
+          {
+            type: "paragraph",
+            html: "KTT ini berfokus pada tiga pilar: pelacakan emisi di tingkat sekolah, larangan plastik sekali pakai di kampus, dan laboratorium kebijakan pelajar pan-regional yang merancang rekomendasi legislasi langsung untuk para pembuat undang-undang. Delegasi dari Indonesia, Australia, Filipina, dan Jepang mempresentasikan program percontohan yang sudah berjalan di sekolah mereka.",
+          },
+          {
+            type: "callout",
+            html: "Delegasi Ursulin sendiri mempresentasikan sistem pengomposan limbah makanan yang berhasil mengurangi sampah kafetaria sebesar 62% dalam satu semester.",
+          },
+          { type: "eyebrow", text: "Langkah selanjutnya" },
+          {
+            type: "paragraph",
+            html: "Deklarasi bersama ditandatangani oleh perwakilan dari lebih dari 40 sekolah yang berkomitmen untuk audit emisi triwulanan dan peluncuran dataset terbuka bersama. KTT berikutnya dijadwalkan di Seoul pada 2027.",
+          },
+          {
+            type: "quote",
+            html: "Orang dewasa terus mengatakan generasi berikutnya yang akan menyelesaikan ini. Kamilah generasi berikutnya. Kami tidak lagi menunggu izin.",
+          },
+        ],
+      },
+    },
   },
 
 
@@ -190,6 +308,36 @@ export const articles: Article[] = [
         html: "Traditional sports leagues are paying attention. The NBA and La Liga both announced esports-inspired production upgrades for 2026. The question is no longer whether esports is legitimate — it's whether the rest of sports can keep up.",
       },
     ],
+    translations: {
+      id: {
+        title: "Esports Masuk Arus Utama: Rekor Penonton Turnamen Pecah",
+        excerpt:
+          "Kejuaraan game terbaru melampaui olahraga tradisional dalam jumlah penonton online, menandai pergeseran budaya yang telah lama berkembang.",
+        content: [
+          {
+            type: "paragraph",
+            html: "Untuk pertama kalinya, sebuah final esports menarik <strong>lebih banyak penonton online secara bersamaan daripada final UEFA Champions League tahun lalu</strong>. Bukan perbandingan tipis. Kejuaraan Dunia Valorant 2026 mencapai puncak 6,8 juta penonton bersamaan di Twitch dan YouTube — angka yang dulu hanya dimiliki olahraga tradisional.",
+          },
+          { type: "eyebrow", text: "Mengapa terjadi pergeseran" },
+          {
+            type: "paragraph",
+            html: "Tiga hal berubah. Nilai produksi kini menyaingi siaran TV. Para pemain telah menjadi kepribadian penuh dengan pengikut lintas platform. Dan — yang paling penting — Gen Z menonton dengan cara berbeda: klip, siaran langsung, dan layar kedua, bukan siaran terjadwal.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Produksi", text: "pembukaan sinematik, pengambilan gambar drone, arc narasi" },
+              { label: "Kepribadian", text: "pemain sebagai streamer, bukan hanya atlet" },
+              { label: "Distribusi", text: "liputan yang mengutamakan klip dan berorientasi sosial" },
+            ],
+          },
+          {
+            type: "paragraph",
+            html: "Liga olahraga tradisional memperhatikan. NBA dan La Liga keduanya mengumumkan peningkatan produksi terinspirasi esports untuk 2026. Pertanyaannya bukan lagi apakah esports itu sah — melainkan apakah olahraga lainnya bisa mengikuti.",
+          },
+        ],
+      },
+    },
   },
 
 
@@ -229,6 +377,37 @@ export const articles: Article[] = [
         html: "Teachers we spoke to aren't anti-AI. They're anti-shortcut. The line they keep drawing: use it to ask better questions, not to avoid asking them at all.",
       },
     ],
+    translations: {
+      id: {
+        title: "Alat Belajar AI Ada di Setiap Kelas — Tapi Apakah Benar-Benar Membantu?",
+        excerpt:
+          "Pandangan lebih dalam tentang bagaimana Gen Z sebenarnya menggunakan AI untuk belajar, apa yang diamati guru, dan apakah nilai benar-benar meningkat.",
+        content: [
+          {
+            type: "paragraph",
+            html: "Masuk ke kelas SMA mana saja di 2026 dan kamu akan melihatnya: pelajar diam-diam memeriksa tutor AI di sela-sela pertanyaan, menyusun esai dengan bantuan AI, membuat kartu flash dalam hitungan detik. <strong>Alatnya ada di mana-mana. Yang kurang jelas adalah apakah mereka benar-benar membuat pelajar lebih pintar.</strong>",
+          },
+          { type: "eyebrow", text: "Datanya" },
+          {
+            type: "paragraph",
+            html: "Sebuah studi 2026 dari OECD melacak 14.000 pelajar di 12 negara. Mereka yang secara rutin menggunakan alat belajar AI mendapat nilai rata-rata 8% lebih tinggi pada tes pemecahan masalah — tetapi hanya jika mereka menggunakannya untuk <em>menjelaskan konsep</em>. Pelajar yang menggunakan AI untuk <em>menghasilkan jawaban</em> mendapat nilai 11% lebih rendah pada tes yang sama.",
+          },
+          {
+            type: "callout",
+            html: "Alatnya bukan masalahnya. Cara kamu menggunakannya adalah segalanya.",
+          },
+          { type: "eyebrow", text: "Apa yang pelajar ceritakan kepada kami" },
+          {
+            type: "paragraph",
+            html: "Kami mensurvei 200 pelajar SMA Regina Pacis Surakarta secara informal. Polanya: sebagian besar mengatakan AI membantu mereka belajar lebih cepat, tetapi hanya sekitar sepertiga yang merasa mereka benar-benar <em>memahami</em> materi dengan lebih baik. Sisanya merasa lebih siap — dan juga lebih cemas.",
+          },
+          {
+            type: "paragraph",
+            html: "Guru-guru yang kami ajak bicara tidak anti-AI. Mereka anti-jalan pintas. Garis yang terus mereka tarik: gunakan untuk mengajukan pertanyaan yang lebih baik, bukan untuk menghindari pertanyaan sama sekali.",
+          },
+        ],
+      },
+    },
   },
 ];
 
@@ -244,4 +423,13 @@ export function getSortedArticles(): Article[] {
   return [...articles].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );
+}
+
+export function getLocalizedArticle(article: Article, lang: string) {
+  const tr = lang !== "en" ? article.translations?.[lang as "id"] : undefined;
+  return {
+    title: tr?.title ?? article.title,
+    excerpt: tr?.excerpt ?? article.excerpt,
+    content: tr?.content ?? article.content,
+  };
 }

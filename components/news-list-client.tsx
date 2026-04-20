@@ -4,9 +4,9 @@ import { useMemo, useState } from "react";
 import type { Article, Category } from "@/content/types";
 import { ArticleCard } from "@/components/article-card";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/components/language-provider";
 
-const FILTERS: ("All" | Category)[] = [
-  "All",
+const CATEGORY_FILTERS: Category[] = [
   "Environment",
   "Economy",
   "Politics",
@@ -16,7 +16,10 @@ const FILTERS: ("All" | Category)[] = [
 ];
 
 export function NewsListClient({ articles }: { articles: Article[] }) {
-  const [active, setActive] = useState<(typeof FILTERS)[number]>("All");
+  const { t } = useLanguage();
+  const [active, setActive] = useState<"All" | Category>("All");
+
+  const filters: ("All" | Category)[] = ["All", ...CATEGORY_FILTERS];
 
   const filtered = useMemo(() => {
     if (active === "All") return articles;
@@ -30,7 +33,7 @@ export function NewsListClient({ articles }: { articles: Article[] }) {
         role="tablist"
         aria-label="Filter articles by category"
       >
-        {FILTERS.map((f) => {
+        {filters.map((f) => {
           const isActive = f === active;
           return (
             <button
@@ -45,7 +48,7 @@ export function NewsListClient({ articles }: { articles: Article[] }) {
                   : "bg-feed text-ink/70 hover:bg-feed/70 hover:text-ink",
               )}
             >
-              {f}
+              {f === "All" ? t("news.filter.all") : f}
             </button>
           );
         })}
@@ -53,9 +56,7 @@ export function NewsListClient({ articles }: { articles: Article[] }) {
 
       {filtered.length === 0 ? (
         <div className="rounded-xl border border-dashed border-ink/15 py-20 text-center">
-          <p className="text-sm text-ink/60">
-            No stories in this category yet. Check back soon.
-          </p>
+          <p className="text-sm text-ink/60">{t("news.empty")}</p>
         </div>
       ) : (
         <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
