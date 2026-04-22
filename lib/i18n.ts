@@ -184,7 +184,7 @@ export const dict = {
   "about.closing.cta.contact": { en: "Get in touch", id: "Hubungi kami" },
 
   // Updates page — recruitment block
-  "updates.recruitment.title": { en: "Open Recruitment — Coming Soon", id: "Rekrutmen Terbuka — Segera Hadir" },
+  "updates.recruitment.title": { en: "Join the UGS Team — 2026", id: "Bergabunglah dengan Tim UGS — 2026" },
   "updates.recruitment.body": {
     en: "We're getting everything ready to open recruitment for the UGS team. Details on divisions, roles, and how to apply will be posted here first. Stay tuned.",
     id: "Kami sedang mempersiapkan segalanya untuk membuka rekrutmen tim UGS. Detail divisi, peran, dan cara mendaftar akan diposting di sini lebih dulu. Pantau terus.",
