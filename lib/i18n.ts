@@ -184,10 +184,10 @@ export const dict = {
   "about.closing.cta.contact": { en: "Get in touch", id: "Hubungi kami" },
 
   // Updates page — recruitment block
-  "updates.recruitment.title": { en: "Join the UGS team for Spring 2026", id: "Bergabunglah dengan tim UGS untuk Spring 2026" },
+  "updates.recruitment.title": { en: "Open Recruitment — Coming Soon", id: "Rekrutmen Terbuka — Segera Hadir" },
   "updates.recruitment.body": {
-    en: "We're looking for passionate students to join our News Writer, Multimedia & Digital, and Website Development divisions. Help us shape the future of student journalism at Ursulin.",
-    id: "Kami mencari pelajar bersemangat untuk bergabung di divisi News Writer, Multimedia & Digital, dan Website Development. Bantu kami membentuk masa depan jurnalisme pelajar di Ursulin.",
+    en: "We're getting everything ready to open recruitment for the UGS team. Details on divisions, roles, and how to apply will be posted here first. Stay tuned.",
+    id: "Kami sedang mempersiapkan segalanya untuk membuka rekrutmen tim UGS. Detail divisi, peran, dan cara mendaftar akan diposting di sini lebih dulu. Pantau terus.",
   },
 } as const;
 

@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
 import { formatDate } from "@/lib/utils";
 import type { Update, UpcomingEvent } from "@/content/types";
@@ -9,14 +7,6 @@ import type { Update, UpcomingEvent } from "@/content/types";
 interface Props {
   updates: Update[];
   upcomingEvents: UpcomingEvent[];
-}
-
-function formatEventDate(iso: string) {
-  const d = new Date(iso);
-  return {
-    month: d.toLocaleDateString("en-US", { month: "short" }).toUpperCase(),
-    day: d.getDate().toString().padStart(2, "0"),
-  };
 }
 
 function localize<T extends { translations?: { id?: { title?: string; body?: string } } }>(
@@ -51,7 +41,7 @@ export function UpdatesPageContent({ updates, upcomingEvents }: Props) {
         <h2 className="mb-5 text-xl font-semibold text-ink">{t("updates.recruitment")}</h2>
         <div className="overflow-hidden rounded-2xl bg-brand p-8 text-paper sm:p-10">
           <span className="inline-block rounded-full bg-paper/15 px-3 py-1 text-xs font-bold uppercase tracking-wider">
-            {t("updates.deadline")}: Apr 30, 2026
+            Coming Soon
           </span>
           <h3 className="mt-5 text-2xl font-bold leading-tight sm:text-3xl">
             {t("updates.recruitment.title")}
@@ -59,41 +49,14 @@ export function UpdatesPageContent({ updates, upcomingEvents }: Props) {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-paper/90">
             {t("updates.recruitment.body")}
           </p>
-          <div className="mt-7">
-            <Button asChild size="lg" className="bg-paper text-brand hover:bg-paper/90">
-              <Link href="/contact">{t("updates.apply")}</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* Upcoming events */}
       <section className="mb-16">
         <h2 className="mb-5 text-xl font-semibold text-ink">{t("updates.events")}</h2>
-        <div className="divide-y divide-ink/10 overflow-hidden rounded-2xl border border-ink/10 bg-paper">
-          {upcomingEvents.map((e) => {
-            const d = formatEventDate(e.date);
-            const { title, body } = localize(e, lang);
-            return (
-              <div
-                key={e.date + e.title}
-                className="flex gap-5 p-5 transition-colors hover:bg-feed/40 sm:p-7"
-              >
-                <div className="flex h-16 w-16 flex-shrink-0 flex-col items-center justify-center rounded-lg bg-feed text-center">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink/60">
-                    {d.month}
-                  </span>
-                  <span className="text-2xl font-bold leading-none text-ink">
-                    {d.day}
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold text-ink sm:text-lg">{title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-text">{body}</p>
-                </div>
-              </div>
-            );
-          })}
+        <div className="flex items-center justify-center rounded-2xl border border-ink/10 bg-paper py-16">
+          <p className="text-base font-medium text-ink/40">Coming soon</p>
         </div>
       </section>
 
