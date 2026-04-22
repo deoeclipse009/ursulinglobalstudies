@@ -42,6 +42,7 @@ export interface Article {
   excerpt: string;
   coverImage: string;
   coverImageAlt: string;
+  coverImageCredit?: string;
   author: string;
   publishedAt: string; // ISO date
   category: Category;

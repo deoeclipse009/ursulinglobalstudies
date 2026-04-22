@@ -11,399 +11,190 @@ import type { Article } from "./types";
  */
 export const articles: Article[] = [
   {
-    slug: "teen-social-media-bans-global-wave",
-    title: "Locked Out: The Global Wave of Teen Social Media Bans",
+    slug: "fuel-price-hike-indonesia-april-2026",
+    title: "Fuel Shock: Why Your Everyday Costs Just Got Higher",
     excerpt:
-      "You open TikTok. Instagram. Maybe Snapchat. And then — nothing. Not because the app is down, but because the government decided you're too young to be there.",
-    coverImage:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1800&q=80",
-    coverImageAlt:
-      "Close-up of a teenager holding a phone showing a locked social media app",
+      "You didn't change anything. But your wallet might feel it this week. Here's what happened with Indonesia's latest fuel price hike, and why it's bigger than most people realize.",
+    coverImage: "/images/spbu-pertamina-1759386985287_169.jpeg",
+    coverImageAlt: "Fuel dispensers at a Pertamina gas station in Indonesia",
+    coverImageCredit: "Photo: detik.com/jogja",
     author: "UGS Newsroom",
-    publishedAt: "2026-04-12",
-    category: "Politics",
-    readingMinutes: 6,
+    publishedAt: "2026-04-22",
+    category: "Economy",
+    readingMinutes: 5,
     content: [
       {
         type: "paragraph",
-        html: "You open TikTok. Instagram. Maybe Snapchat. And then — nothing. <strong>Not because the app is down. But because the government decided you're too young to be there.</strong>",
+        html: "You didn't change anything. But your wallet might feel it this week. Here's what happened with Indonesia's latest fuel price hike, and why it's bigger than most people realize.",
+      },
+      { type: "eyebrow", text: "WHAT'S HAPPENING" },
+      {
+        type: "paragraph",
+        html: "On April 18, 2026, Pertamina officially raised prices on three types of non-subsidized fuel: Pertamax Turbo, Dexlite, and Pertamina Dex. The numbers are hard to ignore. Dexlite jumped from Rp14,200 to Rp23,600 per liter. Pertamina Dex went from Rp14,500 to Rp23,900. Pertamax Turbo leapt from Rp13,100 all the way to Rp19,400. <strong>That's a Rp9,400 per-liter increase on diesel. Not a small adjustment.</strong>",
       },
       {
         type: "paragraph",
-        html: "That's the reality hitting millions of teens right now. It started with Australia in 2025 — the first country to fully ban social media for anyone under 16. In one month, <strong>around 4.7 million teen accounts were removed</strong>. That was the opening move.",
-      },
-      { type: "eyebrow", text: "What's happening" },
-      {
-        type: "paragraph",
-        html: "<strong>This is no longer one country's experiment — it's a global regulatory wave.</strong> Spain is pushing a ban for under-16s with mandatory age verification. France is targeting under-15s. Indonesia joins in March 2026 with restrictions on TikTok, Instagram, and Facebook. Denmark, Germany, Malaysia, the UK — all either planning or actively debating the same thing.",
+        html: "The good news is that subsidized fuels like Pertalite and Solar haven't moved. Pertalite stays at Rp10,000 per liter. Solar at Rp6,800. So if you're a regular commuter on a motorcycle, your direct fuel cost is the same. But that's only part of the story.",
       },
       {
         type: "statsGrid",
         items: [
-          { flag: "🇦🇺", label: "Australia", value: "Under-16 ban — active since 2025" },
-          { flag: "🇮🇩", label: "Indonesia", value: "Under-16 restriction — March 2026" },
-          { flag: "🇪🇸", label: "Spain", value: "Under-16 + age verification" },
-          { flag: "🇫🇷", label: "France", value: "Under-15 ban — expected 2026" },
-          { flag: "🇩🇰", label: "Denmark", value: "Under-15 ban planned" },
-          { flag: "🇩🇪", label: "Germany", value: "Debating under 14–16" },
-          { flag: "🇬🇧", label: "United Kingdom", value: "Active consultations" },
-          { flag: "🇲🇾", label: "Malaysia", value: "Under-16 ban planned" },
+          { label: "Pertamax Turbo", value: "Rp13,100 → Rp19,400 (+Rp6,300)" },
+          { label: "Dexlite", value: "Rp14,200 → Rp23,600 (+Rp9,400)" },
+          { label: "Pertamina Dex", value: "Rp14,500 → Rp23,900 (+Rp9,400)" },
+          { label: "Pertamax", value: "Rp12,300 → No change" },
+          { label: "Pertalite", value: "Rp10,000 → No change" },
+          { label: "Bio Solar", value: "Rp6,800 → No change" },
         ],
       },
-      { type: "eyebrow", text: "Why it's happening" },
+      { type: "eyebrow", text: "WHY IT MATTERS" },
       {
         type: "paragraph",
-        html: "Governments point to mental health — studies linking heavy usage to <strong>anxiety, addiction, and shorter attention spans</strong>. But it goes deeper. These platforms weren't built to be healthy. <strong>Algorithms designed to maximize engagement</strong> don't care if you feel worse after scrolling. They care that you come back. Add in data privacy concerns and exposure to harmful content, and governments are starting to treat social media access the same way they treat cigarettes: age-restricted.",
+        html: "Dexlite and Pertamina Dex are diesel fuels. They're what trucks, delivery vehicles, and heavy machinery run on. When diesel gets more expensive, moving goods gets more expensive. And when moving goods costs more, everything at the end of that supply chain follows.",
+      },
+      {
+        type: "paragraph",
+        html: "Economists are already flagging the ripple effects. One projection puts the additional inflation impact at around <strong>0.42%</strong>, nudging annual inflation from 2.51% toward 2.93%. Another warns food price inflation could hit <strong>5 to 6 percent in April</strong> if logistics costs go unchecked.",
+      },
+      {
+        type: "paragraph",
+        html: "The reason things haven't spiked overnight: most freight trucks still run on subsidized Solar, which hasn't changed. That subsidy is the cushion right now. But if it ever moves, the impact would be a completely different conversation.",
       },
       {
         type: "callout",
-        html: "It's not just about mental health. It's about who controls what young people see — and who gets to decide that.",
+        html: "Fuel prices aren't just about energy. They're a pressure point that runs through the entire economy: logistics, food, goods, and the cost of living for millions of people.",
       },
+      { type: "eyebrow", text: "THE BIGGER PICTURE" },
       {
-        type: "list",
-        items: [
-          {
-            label: "Information access",
-            text: "who can see what, where, and when",
-          },
-          {
-            label: "Trend cycles",
-            text: "how culture spreads if young users are locked out",
-          },
-          {
-            label: "Content filtering",
-            text: "different rules = different realities per country",
-          },
-          {
-            label: "Digital identity",
-            text: "age verification becomes the new normal",
-          },
-        ],
+        type: "paragraph",
+        html: "Two things are driving this. First, global oil prices are still volatile because of the ongoing conflict in Iran. Second, the rupiah has been weakening against the US dollar, which makes importing energy more expensive. Indonesia imports part of its energy needs, so when the currency dips, fuel costs go up with it.",
       },
       {
         type: "paragraph",
-        html: "The internet used to feel borderless. The same for everyone. What's happening now is the opposite — access is becoming <strong>conditional, filtered, shaped by wherever you live</strong>.",
+        html: "Pertamina says the adjustment follows a government pricing formula under the Ministry of Energy regulation. But for most people, the formula doesn't matter as much as the price tag does.",
       },
       {
         type: "heading",
         level: 2,
-        text: "Two people. Same app. Same moment. Completely different feeds — because their governments made different calls.",
+        text: "One price change. But the effects don't stop at the pump.",
       },
-      { type: "eyebrow", text: "What you can do" },
+      { type: "eyebrow", text: "WHAT YOU SHOULD KNOW" },
       {
         type: "paragraph",
-        html: "<strong>Don't rely on just one platform for news.</strong> If TikTok is your only source and access gets cut, you're stuck. Cross-check things — it takes ten seconds. Notice your habits too: are you opening apps because you want to, or just out of reflex? And remember — <strong>your data is being tracked</strong> whether there's a ban or not.",
+        html: "The people most exposed here aren't the ones filling up Pertamax Turbo. It's the small vendors, warungs, and market sellers who depend on third-party delivery. When their supplier's transport costs go up, they adjust prices to survive. It's not greed. It's just math.",
       },
-      { type: "eyebrow", text: "The bigger picture" },
       {
         type: "paragraph",
-        html: "This isn't about apps. It's about a slow shift toward <strong>controlled digital spaces</strong> — where what you see is shaped by algorithms and governments at the same time. The scariest part isn't what's on your feed. <strong>It's what's missing from it — and that you'd never know.</strong>",
+        html: "Rural communities feel this harder than urban ones. The farther goods travel, the more expensive distribution becomes, and the wider the gap between city prices and village prices gets.",
+      },
+      {
+        type: "paragraph",
+        html: "<strong>Keep an eye on staple goods in your area over the next few weeks.</strong> That's where this will show up first.",
       },
       {
         type: "quote",
-        html: "Don't just scroll. Question what shows up — and notice what doesn't.",
+        html: "The price at the pump is just the starting point. Follow the supply chain. That's where the real story is.",
       },
       { type: "divider" },
       {
         type: "sources",
         items: [
-          "Australian eSafety Commissioner. (2025). <em>Online Safety Amendment (Social Media Minimum Age) Act 2024: Implementation report.</em> eSafety.gov.au.",
-          "Reuters. (2026, January). <em>Europe moves toward teen social media bans as Spain, France finalize age restrictions.</em> Reuters.com.",
-          "Kementerian Komunikasi dan Digital Republik Indonesia. (2026). <em>Kebijakan pembatasan akses media sosial bagi pengguna di bawah 16 tahun.</em> Kominfo.go.id.",
-          "BBC News. (2026, February). <em>Social media age limits: Which countries are introducing bans and why?</em>",
-          "We Are Social & Meltwater. (2026). <em>Digital 2026: Indonesia country report.</em> Datareportal.com.",
+          "CNBC Indonesia. (2026). <em>Resmi Naik! Daftar Harga BBM di SPBU Pertamina, Berlaku 20 April 2026.</em> cnbcindonesia.com.",
+          "Kontan. (2026). <em>Menakar Dampak Kenaikan Harga BBM Non-Subsidi dan LPG 12 Kg terhadap Inflasi.</em> kontan.co.id.",
+          "Kontan. (2026). <em>Kenaikan Harga BBM Non-Subsidi Tekan Daya Beli, Pertumbuhan Ekonomi Bisa Tertahan.</em> kontan.co.id.",
+          "Kompas Money. (2026). <em>Harga 3 Jenis BBM Pertamina Ini Naik Per 18 April 2026.</em> money.kompas.com.",
+          "RMOL. (2026). <em>Efek Domino Kenaikan Harga BBM Nonsubsidi.</em> rmol.id.",
         ],
       },
     ],
     translations: {
       id: {
-        title: "Terkunci: Gelombang Global Larangan Media Sosial bagi Remaja",
+        title: "BBM Naik, Dompet Terasa: Apa yang Sebenarnya Terjadi?",
         excerpt:
-          "Kamu membuka TikTok. Instagram. Mungkin Snapchat. Lalu — tidak ada apa-apa. Bukan karena aplikasinya mati, tapi karena pemerintah memutuskan kamu terlalu muda untuk ada di sana.",
+          "Kamu tidak mengubah apa-apa. Tapi biaya hidupmu mungkin sudah mulai bergerak. Ini penjelasan kenaikan BBM April 2026 dan kenapa dampaknya lebih besar dari yang kelihatan.",
         content: [
           {
             type: "paragraph",
-            html: "Kamu membuka TikTok. Instagram. Mungkin Snapchat. Lalu — tidak ada apa-apa. <strong>Bukan karena aplikasinya mati. Tapi karena pemerintah memutuskan kamu terlalu muda untuk ada di sana.</strong>",
+            html: "Kamu tidak mengubah apa-apa. Tapi biaya hidupmu mungkin sudah mulai bergerak. Ini penjelasan kenaikan BBM April 2026 dan kenapa dampaknya lebih besar dari yang kelihatan.",
+          },
+          { type: "eyebrow", text: "APA YANG TERJADI" },
+          {
+            type: "paragraph",
+            html: "Per 18 April 2026, Pertamina resmi menaikkan harga tiga jenis BBM nonsubsidi: Pertamax Turbo, Dexlite, dan Pertamina Dex. Angkanya cukup mengejutkan. Dexlite naik dari Rp14.200 menjadi Rp23.600 per liter. Pertamina Dex dari Rp14.500 menjadi Rp23.900. Pertamax Turbo dari Rp13.100 langsung ke Rp19.400. <strong>Untuk Dexlite dan Pertamina Dex, kenaikannya Rp9.400 per liter. Itu bukan penyesuaian kecil.</strong>",
           },
           {
             type: "paragraph",
-            html: "Itulah kenyataan yang dihadapi jutaan remaja saat ini. Dimulai dari Australia pada 2025 — negara pertama yang sepenuhnya melarang media sosial bagi siapa pun di bawah 16 tahun. Dalam satu bulan, <strong>sekitar 4,7 juta akun remaja dihapus</strong>. Itu baru langkah pertama.",
-          },
-          { type: "eyebrow", text: "Apa yang terjadi" },
-          {
-            type: "paragraph",
-            html: "<strong>Ini bukan lagi eksperimen satu negara — ini adalah gelombang regulasi global.</strong> Spanyol mendorong larangan untuk anak di bawah 16 tahun dengan verifikasi usia wajib. Prancis menargetkan anak di bawah 15 tahun. Indonesia ikut pada Maret 2026 dengan pembatasan pada TikTok, Instagram, dan Facebook. Denmark, Jerman, Malaysia, Inggris — semuanya sedang merencanakan atau aktif memperdebatkan hal yang sama.",
+            html: "Kabar baiknya: Pertalite dan Solar subsidi tidak ikut naik. Pertalite tetap Rp10.000 per liter, Solar tetap Rp6.800. Kalau kamu naik motor tiap hari, biaya BBM langsungmu belum berubah. Tapi itu baru setengah ceritanya.",
           },
           {
             type: "statsGrid",
             items: [
-              { flag: "🇦🇺", label: "Australia", value: "Di bawah 16 tahun dilarang — aktif sejak 2025" },
-              { flag: "🇮🇩", label: "Indonesia", value: "Pembatasan di bawah 16 tahun — Maret 2026" },
-              { flag: "🇪🇸", label: "Spanyol", value: "Di bawah 16 tahun + verifikasi usia" },
-              { flag: "🇫🇷", label: "Prancis", value: "Larangan di bawah 15 tahun — perkiraan 2026" },
-              { flag: "🇩🇰", label: "Denmark", value: "Larangan di bawah 15 tahun direncanakan" },
-              { flag: "🇩🇪", label: "Jerman", value: "Membahas usia 14–16 tahun" },
-              { flag: "🇬🇧", label: "Inggris Raya", value: "Konsultasi aktif" },
-              { flag: "🇲🇾", label: "Malaysia", value: "Larangan di bawah 16 tahun direncanakan" },
+              { label: "Pertamax Turbo", value: "Rp13.100 → Rp19.400 (+Rp6.300)" },
+              { label: "Dexlite", value: "Rp14.200 → Rp23.600 (+Rp9.400)" },
+              { label: "Pertamina Dex", value: "Rp14.500 → Rp23.900 (+Rp9.400)" },
+              { label: "Pertamax", value: "Rp12.300 → Tidak berubah" },
+              { label: "Pertalite", value: "Rp10.000 → Tidak berubah" },
+              { label: "Bio Solar", value: "Rp6.800 → Tidak berubah" },
             ],
           },
-          { type: "eyebrow", text: "Mengapa ini terjadi" },
+          { type: "eyebrow", text: "KENAPA INI PENTING" },
           {
             type: "paragraph",
-            html: "Pemerintah menunjuk kesehatan mental — studi yang menghubungkan penggunaan berlebihan dengan <strong>kecemasan, kecanduan, dan rentang perhatian yang semakin pendek</strong>. Tapi ini lebih dalam. Platform ini tidak dibangun untuk menjadi sehat. <strong>Algoritma yang dirancang untuk memaksimalkan keterlibatan</strong> tidak peduli apakah kamu merasa lebih buruk setelah scrolling. Mereka peduli agar kamu kembali. Tambah kekhawatiran privasi data dan paparan konten berbahaya, dan pemerintah mulai memperlakukan akses media sosial seperti rokok: dibatasi usia.",
+            html: "Dexlite dan Pertamina Dex adalah solar. Itu bahan bakar yang dipakai truk, kendaraan logistik, dan mesin industri. Ketika solar nonsubsidi naik, biaya distribusi barang ikut naik. Dan ketika distribusi mahal, harga semua barang di ujung rantai pasok pun ikut bergerak.",
+          },
+          {
+            type: "paragraph",
+            html: "Para ekonom sudah mulai memperingatkan efek berantainya. Satu proyeksi memperkirakan tambahan inflasi sekitar <strong>0,42%</strong>, mendorong inflasi tahunan dari 2,51% menuju 2,93%. Proyeksi lain menyebut <strong>inflasi pangan bisa menembus 5 sampai 6 persen</strong> di April ini kalau biaya logistik tidak segera dikendalikan.",
+          },
+          {
+            type: "paragraph",
+            html: "Kenapa belum langsung terasa? Karena sebagian besar truk pengangkut barang masih pakai Solar subsidi yang belum berubah harganya. Itu yang jadi bantalan sementara. Tapi kalau suatu hari subsidi itu ikut dicabut, situasinya bisa berubah drastis.",
           },
           {
             type: "callout",
-            html: "Ini bukan sekadar soal kesehatan mental. Ini soal siapa yang mengontrol apa yang dilihat anak muda — dan siapa yang berhak memutuskan itu.",
+            html: "Harga BBM bukan cuma soal bensin. Ini titik tekan yang menjalar ke seluruh ekonomi: logistik, pangan, barang pokok, dan biaya hidup jutaan orang.",
           },
+          { type: "eyebrow", text: "GAMBARAN LEBIH BESAR" },
           {
-            type: "list",
-            items: [
-              { label: "Akses informasi", text: "siapa yang bisa melihat apa, di mana, dan kapan" },
-              { label: "Siklus tren", text: "bagaimana budaya menyebar jika pengguna muda dikunci keluar" },
-              { label: "Penyaringan konten", text: "aturan berbeda = realitas berbeda per negara" },
-              { label: "Identitas digital", text: "verifikasi usia menjadi norma baru" },
-            ],
+            type: "paragraph",
+            html: "Ada dua hal yang mendorong kenaikan ini. Pertama, harga minyak dunia masih bergejolak karena konflik yang sedang terjadi di Iran. Kedua, nilai tukar rupiah melemah terhadap dolar AS, yang membuat biaya impor energi semakin berat. Indonesia masih mengimpor sebagian kebutuhan energinya, jadi ketika rupiah turun, harga BBM pun ikut naik.",
           },
           {
             type: "paragraph",
-            html: "Internet dulu terasa tanpa batas. Sama untuk semua orang. Yang terjadi sekarang adalah sebaliknya — akses menjadi <strong>bersyarat, tersaring, dibentuk oleh tempat tinggalmu</strong>.",
+            html: "Pertamina menyebut penyesuaian ini mengikuti formula harga dari Kementerian ESDM, bukan keputusan bisnis semata. Tapi bagi kebanyakan orang, formulanya tidak terlalu penting. Yang terasa adalah angka di papan SPBU.",
           },
           {
             type: "heading",
             level: 2,
-            text: "Dua orang. Aplikasi yang sama. Momen yang sama. Feed yang benar-benar berbeda — karena pemerintah mereka membuat keputusan yang berbeda.",
+            text: "Satu kenaikan harga. Tapi efeknya tidak berhenti di SPBU.",
           },
-          { type: "eyebrow", text: "Apa yang bisa kamu lakukan" },
+          { type: "eyebrow", text: "YANG PERLU KAMU TAHU" },
           {
             type: "paragraph",
-            html: "<strong>Jangan mengandalkan hanya satu platform untuk berita.</strong> Jika TikTok adalah satu-satunya sumbermu dan aksesnya dipotong, kamu terjebak. Cross-check — hanya butuh sepuluh detik. Perhatikan juga kebiasaanmu: apakah kamu membuka aplikasi karena ingin, atau hanya karena refleks? Dan ingat — <strong>datamu dilacak</strong> ada larangan atau tidak.",
+            html: "Yang paling terdampak bukan pengendara Pertamax Turbo. Tapi pedagang warung, penjual pasar, dan usaha kecil yang bergantung pada pengiriman barang dari supplier. Ketika ongkos kirim supplier naik, mereka menyesuaikan harga jual untuk bisa tetap bertahan. Bukan karena serakah. Tapi karena memang begitu hitungannya.",
           },
-          { type: "eyebrow", text: "Gambaran yang lebih besar" },
           {
             type: "paragraph",
-            html: "Ini bukan soal aplikasi. Ini tentang pergeseran lambat menuju <strong>ruang digital yang terkontrol</strong> — di mana apa yang kamu lihat dibentuk oleh algoritma dan pemerintah secara bersamaan. Bagian yang paling menakutkan bukan apa yang ada di feedmu. <strong>Melainkan apa yang tidak ada — dan bahwa kamu tidak akan pernah tahu.</strong>",
+            html: "Daerah pedesaan merasakannya lebih berat dari kota. Makin jauh barang harus dikirim, makin besar biaya distribusinya, makin lebar juga selisih harga antara kota dan desa.",
+          },
+          {
+            type: "paragraph",
+            html: "<strong>Perhatikan harga bahan pokok di sekitarmu dalam beberapa minggu ke depan.</strong> Di situlah dampak ini akan pertama kali kelihatan.",
           },
           {
             type: "quote",
-            html: "Jangan hanya scroll. Tanyakan apa yang muncul — dan perhatikan apa yang tidak.",
+            html: "Harga di SPBU itu cuma awal. Ikuti rantai distribusinya. Di situ cerita yang sebenarnya tersimpan.",
           },
           { type: "divider" },
           {
             type: "sources",
             items: [
-              "Australian eSafety Commissioner. (2025). <em>Online Safety Amendment (Social Media Minimum Age) Act 2024: Implementation report.</em> eSafety.gov.au.",
-              "Reuters. (2026, January). <em>Europe moves toward teen social media bans as Spain, France finalize age restrictions.</em> Reuters.com.",
-              "Kementerian Komunikasi dan Digital Republik Indonesia. (2026). <em>Kebijakan pembatasan akses media sosial bagi pengguna di bawah 16 tahun.</em> Kominfo.go.id.",
-              "BBC News. (2026, February). <em>Social media age limits: Which countries are introducing bans and why?</em>",
-              "We Are Social & Meltwater. (2026). <em>Digital 2026: Indonesia country report.</em> Datareportal.com.",
+              "CNBC Indonesia. (2026). <em>Resmi Naik! Daftar Harga BBM di SPBU Pertamina, Berlaku 20 April 2026.</em> cnbcindonesia.com.",
+              "Kontan. (2026). <em>Menakar Dampak Kenaikan Harga BBM Non-Subsidi dan LPG 12 Kg terhadap Inflasi.</em> kontan.co.id.",
+              "Kontan. (2026). <em>Kenaikan Harga BBM Non-Subsidi Tekan Daya Beli, Pertumbuhan Ekonomi Bisa Tertahan.</em> kontan.co.id.",
+              "Kompas Money. (2026). <em>Harga 3 Jenis BBM Pertamina Ini Naik Per 18 April 2026.</em> money.kompas.com.",
+              "RMOL. (2026). <em>Efek Domino Kenaikan Harga BBM Nonsubsidi.</em> rmol.id.",
             ],
-          },
-        ],
-      },
-    },
-  },
-  {
-    slug: "youth-climate-summit-2026",
-    title: "Youth Climate Summit 2026: Our Generation Takes Action",
-    excerpt:
-      "Coverage from the global youth climate summit where students propose solutions that governments have spent decades avoiding.",
-    coverImage:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=80",
-    coverImageAlt: "Students gathered at a climate rally holding handmade signs",
-    author: "Alex Rivera",
-    publishedAt: "2026-04-07",
-    category: "Environment",
-    readingMinutes: 7,
-    content: [
-      {
-        type: "paragraph",
-        html: "More than 3,000 students from 48 countries gathered in Jakarta last week for the Youth Climate Summit 2026 — the largest student-led environmental conference ever held in Southeast Asia. The message was clear: <strong>we're done waiting for permission to care about our future.</strong>",
-      },
-      { type: "eyebrow", text: "What was on the table" },
-      {
-        type: "paragraph",
-        html: "The summit focused on three pillars: school-level emissions tracking, single-use plastic bans on campus, and a pan-regional student policy lab that drafts legislation recommendations directly for lawmakers. Delegates from Indonesia, Australia, the Philippines, and Japan presented pilot programs already running in their schools.",
-      },
-      {
-        type: "callout",
-        html: "Ursulin's own delegation presented a food-waste composting system that cut cafeteria waste by 62% in one semester.",
-      },
-      { type: "eyebrow", text: "What's next" },
-      {
-        type: "paragraph",
-        html: "A joint declaration was signed by representatives from 40+ schools committing to quarterly emissions audits and the launch of a shared open dataset. The next summit is slated for Seoul in 2027.",
-      },
-      {
-        type: "quote",
-        html: "The adults keep saying the next generation will fix this. We're the next generation. We're not waiting for permission anymore.",
-      },
-    ],
-    translations: {
-      id: {
-        title: "Youth Climate Summit 2026: Generasi Kita Bertindak",
-        excerpt:
-          "Liputan dari KTT iklim pemuda global di mana para pelajar mengusulkan solusi yang selama puluhan tahun dihindari pemerintah.",
-        content: [
-          {
-            type: "paragraph",
-            html: "Lebih dari 3.000 pelajar dari 48 negara berkumpul di Jakarta minggu lalu untuk Youth Climate Summit 2026 — konferensi lingkungan yang dipimpin pelajar terbesar yang pernah diadakan di Asia Tenggara. Pesannya jelas: <strong>kami tidak lagi menunggu izin untuk peduli terhadap masa depan kami.</strong>",
-          },
-          { type: "eyebrow", text: "Apa yang dibahas" },
-          {
-            type: "paragraph",
-            html: "KTT ini berfokus pada tiga pilar: pelacakan emisi di tingkat sekolah, larangan plastik sekali pakai di kampus, dan laboratorium kebijakan pelajar pan-regional yang merancang rekomendasi legislasi langsung untuk para pembuat undang-undang. Delegasi dari Indonesia, Australia, Filipina, dan Jepang mempresentasikan program percontohan yang sudah berjalan di sekolah mereka.",
-          },
-          {
-            type: "callout",
-            html: "Delegasi Ursulin sendiri mempresentasikan sistem pengomposan limbah makanan yang berhasil mengurangi sampah kafetaria sebesar 62% dalam satu semester.",
-          },
-          { type: "eyebrow", text: "Langkah selanjutnya" },
-          {
-            type: "paragraph",
-            html: "Deklarasi bersama ditandatangani oleh perwakilan dari lebih dari 40 sekolah yang berkomitmen untuk audit emisi triwulanan dan peluncuran dataset terbuka bersama. KTT berikutnya dijadwalkan di Seoul pada 2027.",
-          },
-          {
-            type: "quote",
-            html: "Orang dewasa terus mengatakan generasi berikutnya yang akan menyelesaikan ini. Kamilah generasi berikutnya. Kami tidak lagi menunggu izin.",
-          },
-        ],
-      },
-    },
-  },
-
-
-  {
-    slug: "esports-goes-mainstream",
-    title: "Esports Goes Mainstream: Record-Breaking Tournament Viewership",
-    excerpt:
-      "The latest gaming championship surpasses traditional sports in online viewership, marking a cultural shift that's been building for years.",
-    coverImage:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=80",
-    coverImageAlt: "Esports arena filled with fans watching a tournament on giant screens",
-    author: "Jordan Lee",
-    publishedAt: "2026-04-03",
-    category: "Hype/Trend",
-    readingMinutes: 6,
-    content: [
-      {
-        type: "paragraph",
-        html: "For the first time, a single esports final pulled <strong>more concurrent online viewers than last year's UEFA Champions League final</strong>. It wasn't close. The 2026 Valorant World Championship peaked at 6.8 million concurrent viewers across Twitch and YouTube — numbers that used to belong only to traditional sports.",
-      },
-      { type: "eyebrow", text: "Why the shift" },
-      {
-        type: "paragraph",
-        html: "Three things changed. Production value now rivals broadcast TV. Players have become full-fledged personalities with multi-platform followings. And — crucially — Gen Z watches differently: clips, streams, and second screens, not scheduled broadcasts.",
-      },
-      {
-        type: "list",
-        items: [
-          { label: "Production", text: "cinematic opens, drone shots, narrative arcs" },
-          { label: "Personality", text: "players as streamers, not just athletes" },
-          { label: "Distribution", text: "clip-first, social-native coverage" },
-        ],
-      },
-      {
-        type: "paragraph",
-        html: "Traditional sports leagues are paying attention. The NBA and La Liga both announced esports-inspired production upgrades for 2026. The question is no longer whether esports is legitimate — it's whether the rest of sports can keep up.",
-      },
-    ],
-    translations: {
-      id: {
-        title: "Esports Masuk Arus Utama: Rekor Penonton Turnamen Pecah",
-        excerpt:
-          "Kejuaraan game terbaru melampaui olahraga tradisional dalam jumlah penonton online, menandai pergeseran budaya yang telah lama berkembang.",
-        content: [
-          {
-            type: "paragraph",
-            html: "Untuk pertama kalinya, sebuah final esports menarik <strong>lebih banyak penonton online secara bersamaan daripada final UEFA Champions League tahun lalu</strong>. Bukan perbandingan tipis. Kejuaraan Dunia Valorant 2026 mencapai puncak 6,8 juta penonton bersamaan di Twitch dan YouTube — angka yang dulu hanya dimiliki olahraga tradisional.",
-          },
-          { type: "eyebrow", text: "Mengapa terjadi pergeseran" },
-          {
-            type: "paragraph",
-            html: "Tiga hal berubah. Nilai produksi kini menyaingi siaran TV. Para pemain telah menjadi kepribadian penuh dengan pengikut lintas platform. Dan — yang paling penting — Gen Z menonton dengan cara berbeda: klip, siaran langsung, dan layar kedua, bukan siaran terjadwal.",
-          },
-          {
-            type: "list",
-            items: [
-              { label: "Produksi", text: "pembukaan sinematik, pengambilan gambar drone, arc narasi" },
-              { label: "Kepribadian", text: "pemain sebagai streamer, bukan hanya atlet" },
-              { label: "Distribusi", text: "liputan yang mengutamakan klip dan berorientasi sosial" },
-            ],
-          },
-          {
-            type: "paragraph",
-            html: "Liga olahraga tradisional memperhatikan. NBA dan La Liga keduanya mengumumkan peningkatan produksi terinspirasi esports untuk 2026. Pertanyaannya bukan lagi apakah esports itu sah — melainkan apakah olahraga lainnya bisa mengikuti.",
-          },
-        ],
-      },
-    },
-  },
-
-
-  {
-    slug: "ai-study-tools-classroom",
-    title: "AI Study Tools Are in Every Classroom — But Are They Helping?",
-    excerpt:
-      "A closer look at how Gen Z is actually using AI to study, what teachers are seeing, and whether grades are really going up.",
-    coverImage:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80",
-    coverImageAlt: "A student studying with a laptop and notebook side by side",
-    author: "Riley Park",
-    publishedAt: "2026-03-28",
-    category: "Technology/AI",
-    readingMinutes: 5,
-    content: [
-      {
-        type: "paragraph",
-        html: "Walk into any high school classroom in 2026 and you'll see it: students quietly checking AI tutors between questions, drafting essays with AI assistance, generating flashcards in seconds. <strong>The tools are everywhere. What's less clear is whether they're actually making students smarter.</strong>",
-      },
-      { type: "eyebrow", text: "The data" },
-      {
-        type: "paragraph",
-        html: "A 2026 study from the OECD tracked 14,000 students across 12 countries. Those who used AI study tools regularly scored an average of 8% higher on problem-solving tests — but only if they used them to <em>explain concepts</em>. Students who used AI to <em>produce answers</em> scored 11% lower on the same tests.",
-      },
-      {
-        type: "callout",
-        html: "The tool isn't the problem. How you use it is everything.",
-      },
-      { type: "eyebrow", text: "What students told us" },
-      {
-        type: "paragraph",
-        html: "We surveyed 200 SMA Regina Pacis Surakarta students informally. The pattern: most said AI helps them study faster, but only about a third said they feel they actually <em>understand</em> the material better. The rest said they felt more prepared — and also more anxious.",
-      },
-      {
-        type: "paragraph",
-        html: "Teachers we spoke to aren't anti-AI. They're anti-shortcut. The line they keep drawing: use it to ask better questions, not to avoid asking them at all.",
-      },
-    ],
-    translations: {
-      id: {
-        title: "Alat Belajar AI Ada di Setiap Kelas — Tapi Apakah Benar-Benar Membantu?",
-        excerpt:
-          "Pandangan lebih dalam tentang bagaimana Gen Z sebenarnya menggunakan AI untuk belajar, apa yang diamati guru, dan apakah nilai benar-benar meningkat.",
-        content: [
-          {
-            type: "paragraph",
-            html: "Masuk ke kelas SMA mana saja di 2026 dan kamu akan melihatnya: pelajar diam-diam memeriksa tutor AI di sela-sela pertanyaan, menyusun esai dengan bantuan AI, membuat kartu flash dalam hitungan detik. <strong>Alatnya ada di mana-mana. Yang kurang jelas adalah apakah mereka benar-benar membuat pelajar lebih pintar.</strong>",
-          },
-          { type: "eyebrow", text: "Datanya" },
-          {
-            type: "paragraph",
-            html: "Sebuah studi 2026 dari OECD melacak 14.000 pelajar di 12 negara. Mereka yang secara rutin menggunakan alat belajar AI mendapat nilai rata-rata 8% lebih tinggi pada tes pemecahan masalah — tetapi hanya jika mereka menggunakannya untuk <em>menjelaskan konsep</em>. Pelajar yang menggunakan AI untuk <em>menghasilkan jawaban</em> mendapat nilai 11% lebih rendah pada tes yang sama.",
-          },
-          {
-            type: "callout",
-            html: "Alatnya bukan masalahnya. Cara kamu menggunakannya adalah segalanya.",
-          },
-          { type: "eyebrow", text: "Apa yang pelajar ceritakan kepada kami" },
-          {
-            type: "paragraph",
-            html: "Kami mensurvei 200 pelajar SMA Regina Pacis Surakarta secara informal. Polanya: sebagian besar mengatakan AI membantu mereka belajar lebih cepat, tetapi hanya sekitar sepertiga yang merasa mereka benar-benar <em>memahami</em> materi dengan lebih baik. Sisanya merasa lebih siap — dan juga lebih cemas.",
-          },
-          {
-            type: "paragraph",
-            html: "Guru-guru yang kami ajak bicara tidak anti-AI. Mereka anti-jalan pintas. Garis yang terus mereka tarik: gunakan untuk mengajukan pertanyaan yang lebih baik, bukan untuk menghindari pertanyaan sama sekali.",
           },
         ],
       },

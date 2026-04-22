@@ -71,6 +71,11 @@ export function ArticlePageContent({ article, related }: Props) {
             priority
           />
         </div>
+        {article.coverImageCredit && (
+          <p className="mt-2 text-right text-xs text-ink/40">
+            {article.coverImageCredit}
+          </p>
+        )}
       </div>
 
       {/* Body */}
