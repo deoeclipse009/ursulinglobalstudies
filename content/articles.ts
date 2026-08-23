@@ -281,7 +281,6 @@ export const articles: Article[] = [
         items: [
           "Al Jazeera. (2026). <em>More than a dozen reported killed in Israeli attacks on south Lebanon.</em> aljazeera.com.",
           "Al Jazeera. (2026). <em>Israel to intensify Lebanon offensive to 'crush' Hezbollah.</em> aljazeera.com.",
-          "Wikipedia. (2026). <em>Timeline of the 2026 Lebanon war.</em> en.wikipedia.org.",
           "Security Council Report. (2026). <em>Lebanon, May 2026 Monthly Forecast.</em> securitycouncilreport.org.",
         ],
       },
@@ -360,7 +359,6 @@ export const articles: Article[] = [
             items: [
               "Al Jazeera. (2026). <em>More than a dozen reported killed in Israeli attacks on south Lebanon.</em> aljazeera.com.",
               "Al Jazeera. (2026). <em>Israel to intensify Lebanon offensive to 'crush' Hezbollah.</em> aljazeera.com.",
-              "Wikipedia. (2026). <em>Timeline of the 2026 Lebanon war.</em> en.wikipedia.org.",
               "Security Council Report. (2026). <em>Lebanon, May 2026 Monthly Forecast.</em> securitycouncilreport.org.",
             ],
           },
