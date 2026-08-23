@@ -370,7 +370,7 @@ export const articles: Article[] = [
   },
   {
     slug: "bumi-makin-panas-climate-may-2026",
-    title: "Bumi Makin Panas: Earth Just Logged Its Fourth-Hottest April Ever",
+    title: "Earth Just Logged Its Fourth-Hottest April Ever",
     excerpt:
       "The planet keeps setting records it shouldn't be proud of. Four decades of data, and this week's BMKG warnings, show the heat closing in on Indonesia.",
     coverImage: "/images/bumi-makin-panas-climate-may-2026.jpg",
@@ -522,7 +522,7 @@ export const articles: Article[] = [
   },
   {
     slug: "bi-rate-hike-may-2026",
-    title: "Suku Bunga Naik: Why Bank Indonesia Just Surprised Everyone",
+    title: "Why Bank Indonesia Just Surprised Everyone",
     excerpt:
       "Economists expected a small move. BI delivered a big one. The central bank raised rates further than almost anyone predicted, and the decision reaches straight into loans, savings, and the rupiah in your pocket.",
     coverImage: "/images/bi-rate-hike-may-2026.jpg",
