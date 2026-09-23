@@ -1,15 +1,19 @@
 import type { Article } from "./types";
+import publishedArticles from "./published-articles.json";
 
 /**
  * All UGS articles live here.
  *
- * How to add a new article:
- *   1. Append a new object to this array.
- *   2. `slug` must be unique, lowercase, hyphenated.
- *   3. `content` is an array of blocks; see `./types.ts` for every block type.
- *   4. Save. That's it: the /news list and /news/[slug] page update automatically.
+ * Articles come from two places:
+ *   - `published-articles.json`: articles added through the hidden admin page
+ *     (/admin) or by an AI coding agent following AGENTS.md. Prefer this.
+ *   - The `handwrittenArticles` array below: older articles written by hand.
+ *
+ * Rules for either: `slug` must be unique, lowercase, hyphenated, and
+ * `content` is an array of blocks (see `./types.ts` for every block type).
+ * The /news list and /news/[slug] pages update automatically.
  */
-export const articles: Article[] = [
+const handwrittenArticles: Article[] = [
   {
     slug: "fuel-price-hike-indonesia-april-2026",
     title: "Fuel Shock: Why Your Everyday Costs Just Got Higher",
@@ -680,6 +684,11 @@ export const articles: Article[] = [
       },
     },
   },
+];
+
+export const articles: Article[] = [
+  ...handwrittenArticles,
+  ...(publishedArticles as Article[]),
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
