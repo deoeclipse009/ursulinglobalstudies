@@ -7,7 +7,6 @@ import {
   Download,
   FileUp,
   Loader2,
-  LogOut,
   Sparkles,
   UploadCloud,
 } from "lucide-react";
@@ -134,11 +133,6 @@ export function AdminConsole() {
     }
   }
 
-  async function logout() {
-    await fetch("/api/admin/logout", { method: "POST" });
-    window.location.href = "/";
-  }
-
   const preview =
     article &&
     (previewLang === "id" && article.translations?.id
@@ -151,32 +145,25 @@ export function AdminConsole() {
 
   return (
     <div className="container max-w-6xl py-10">
-      <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-3xl font-bold text-ink">Newsroom admin</h1>
-          <p className="mt-1 text-sm text-ink/60">
-            Attach a submission form, let AI lay it out for the site, check it, publish.
-          </p>
-        </div>
-        <Button variant="outline" size="sm" onClick={logout}>
-          <LogOut /> Sign out
-        </Button>
+      <div className="mb-8">
+        <h1 className="font-serif text-3xl font-bold text-ink">Publish an article</h1>
+        <p className="mt-1 text-sm text-ink/60">
+          Attach a submission form, let AI lay it out for the site, check it, publish.
+        </p>
       </div>
 
       {status && (!status.providers.length || !status.publishing) && (
         <div className="mb-6 rounded-xl border border-warn bg-warn/30 p-4 text-sm text-ink">
-          <p className="font-semibold">Setup incomplete</p>
+          <p className="font-semibold">Finish setting up your account</p>
           <ul className="mt-1 list-disc pl-5">
-            {!status.providers.length && (
-              <li>No AI provider: set <code>ANTHROPIC_API_KEY</code> (or <code>GEMINI_API_KEY</code>) in the hosting environment.</li>
-            )}
+            {!status.providers.length && <li>Add your Claude (or Gemini) API key to use "Format with AI".</li>}
             {!status.publishing && (
-              <li>
-                Publishing is off: set <code>GITHUB_TOKEN</code> and <code>GITHUB_REPO</code>. You can still
-                format articles and download the JSON.
-              </li>
+              <li>Add your GitHub token and the website repository to publish. You can still format and download the JSON.</li>
             )}
           </ul>
+          <a href="/admin/account" className="mt-2 inline-block font-semibold text-brand underline">
+            Go to My account
+          </a>
         </div>
       )}
 

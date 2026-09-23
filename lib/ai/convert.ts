@@ -14,8 +14,15 @@ export interface SubmissionDoc {
   pdfBase64?: string;
 }
 
+export interface AiKeys {
+  anthropicKey: string | null;
+  geminiKey: string | null;
+}
+
 export interface ConvertOptions {
   provider: Provider;
+  /** The signed-in editor's own API keys. */
+  keys: AiKeys;
   /** Ask the model to translate when only one language was submitted. */
   translateMissing: boolean;
 }
@@ -27,10 +34,10 @@ export interface ConvertResult {
   model: string;
 }
 
-export function availableProviders(): Provider[] {
+export function availableProviders(keys: AiKeys): Provider[] {
   const list: Provider[] = [];
-  if (process.env.ANTHROPIC_API_KEY) list.push("claude");
-  if (process.env.GEMINI_API_KEY) list.push("gemini");
+  if (keys.anthropicKey) list.push("claude");
+  if (keys.geminiKey) list.push("gemini");
   return list;
 }
 
@@ -86,7 +93,7 @@ function docLabel(d: SubmissionDoc) {
 
 async function runClaude(docs: SubmissionDoc[], opts: ConvertOptions) {
   const model = process.env.ANTHROPIC_MODEL || "claude-opus-5";
-  const client = new Anthropic();
+  const client = new Anthropic({ apiKey: opts.keys.anthropicKey ?? undefined });
 
   const content: Anthropic.ContentBlockParam[] = [];
   for (const d of docs) {
@@ -147,7 +154,7 @@ async function runGemini(docs: SubmissionDoc[], opts: ConvertOptions) {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "x-goog-api-key": process.env.GEMINI_API_KEY ?? "",
+        "x-goog-api-key": opts.keys.geminiKey ?? "",
       },
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: FORMAT_SYSTEM_PROMPT }] },
