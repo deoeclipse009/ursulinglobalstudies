@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { availableProviders, convertSubmission, type Provider, type SubmissionDoc } from "@/lib/ai/convert";
 import { extractFromDriveLink, extractFromFile } from "@/lib/ai/extract";
+import { credentialsOf } from "@/lib/server/editors";
+import { errorResponse, HttpError, requireUser } from "@/lib/server/session";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -10,6 +12,9 @@ export const maxDuration = 300;
 
 export async function POST(req: Request) {
   try {
+    const user = await requireUser({ editor: true });
+    const creds = credentialsOf(user.editor!);
+    const keys = { anthropicKey: creds.anthropicKey, geminiKey: creds.geminiKey };
     const form = await req.formData();
     const docs: SubmissionDoc[] = [];
     for (const language of ["en", "id"] as const) {
@@ -22,19 +27,24 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Attach the English and/or Indonesian document (or paste a Drive link)." }, { status: 400 });
     }
 
-    const providers = availableProviders();
+    const providers = availableProviders(keys);
     const requested = String(form.get("provider") ?? "") as Provider;
     const provider = providers.includes(requested) ? requested : providers[0];
     if (!provider) {
-      return NextResponse.json({ error: "No AI provider configured: set ANTHROPIC_API_KEY (or GEMINI_API_KEY)." }, { status: 503 });
+      return NextResponse.json({ error: "Add your Claude (or Gemini) API key on the Account page first." }, { status: 400 });
     }
 
     const result = await convertSubmission(docs, {
       provider,
+      keys,
       translateMissing: form.get("translateMissing") === "on",
     });
     return NextResponse.json(result);
   } catch (e) {
+    if (e instanceof HttpError) return errorResponse(e);
+    if (e instanceof Anthropic.AuthenticationError) {
+      return NextResponse.json({ error: "Claude rejected your API key. Check it on the Account page." }, { status: 400 });
+    }
     if (e instanceof Anthropic.RateLimitError) {
       return NextResponse.json({ error: "Claude is rate-limited right now. Try again in a minute." }, { status: 429 });
     }

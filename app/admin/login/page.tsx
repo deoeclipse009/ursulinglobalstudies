@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 
 export default function AdminLoginPage() {
   const router = useRouter();
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -20,7 +21,7 @@ export default function AdminLoginPage() {
     const res = await fetch("/api/admin/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ username, password }),
     });
     setBusy(false);
     if (res.ok) {
@@ -28,6 +29,7 @@ export default function AdminLoginPage() {
       router.refresh();
     } else {
       setError(((await res.json().catch(() => ({}))) as { error?: string }).error ?? "Sign-in failed.");
+      setPassword("");
     }
   }
 
@@ -40,10 +42,21 @@ export default function AdminLoginPage() {
           </span>
           <div>
             <h1 className="text-lg font-bold text-ink">Newsroom admin</h1>
-            <p className="text-sm text-ink/60">Editors only.</p>
+            <p className="text-sm text-ink/60">Editors only. Your account comes from the head admin.</p>
           </div>
         </div>
         <form onSubmit={submit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="username">Username</Label>
+            <Input
+              id="username"
+              autoComplete="username"
+              autoCapitalize="none"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
             <Input

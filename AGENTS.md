@@ -27,6 +27,9 @@ Don't edit the older hand-written articles in `content/articles.ts` unless asked
 
 ## Admin page
 
-`/admin` (hidden, password-protected) does the same thing through a browser:
+`/admin` (hidden) does the same thing through a browser:
 upload → AI formats (Claude or Gemini) → human reviews → publish commits
-to GitHub → the host redeploys. Setup: `docs/ADMIN.md`.
+to GitHub → the host redeploys. Each editor has an account (Supabase table
+`editors`, `supabase/schema.sql`) holding their own encrypted API keys,
+GitHub token and repo; the head admin invites them. Code: `app/admin`,
+`app/api/admin`, `lib/server`. Setup: `docs/ADMIN.md`.

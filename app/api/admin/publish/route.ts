@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { validateArticle } from "@/lib/article-schema";
 import { publishArticle } from "@/lib/github-publish";
+import { credentialsOf } from "@/lib/server/editors";
+import { errorResponse, requireUser } from "@/lib/server/session";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -14,6 +16,7 @@ const IMAGE_EXT: Record<string, string> = {
 
 export async function POST(req: Request) {
   try {
+    const user = await requireUser({ editor: true });
     const form = await req.formData();
     const article = validateArticle(JSON.parse(String(form.get("article") ?? "null")));
 
@@ -27,6 +30,8 @@ export async function POST(req: Request) {
     }
 
     const result = await publishArticle({
+      target: credentialsOf(user.editor!),
+      publishedBy: user.displayName,
       article,
       cover,
       overwrite: form.get("overwrite") === "on",
@@ -37,6 +42,6 @@ export async function POST(req: Request) {
       const msg = e.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
       return NextResponse.json({ error: `Article data is invalid: ${msg}` }, { status: 400 });
     }
-    return NextResponse.json({ error: (e as Error).message }, { status: 500 });
+    return errorResponse(e);
   }
 }
